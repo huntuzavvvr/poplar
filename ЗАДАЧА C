@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int data[10];
+    for (int i = 0; i < 10; i++) {
+        cin >> data[i];
+    }
+    int p,k,l;
+    int h = 0;
+    l = 0;
+    for (int i = 9; i >= 0; i--) {
+        p = i;
+        k = i - 1;
+        while (data[i]) {
+            cout << p;
+            data[i]--;
+            while (data[i - 1]) {
+                cout << k;
+                
+                data[i - 1]--;
+                if (k==l||h==0) {
+                    break;
+                }
+                h=1;
+            }
+            l = k;
+        }
+    }
+    return 0;
+}
