@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int p1, n1, t1, p2, n2, t2;
+	cin >> p1 >> n1 >> t1;
+
+	cin >> p2 >> n2 >> t2;
+	int time1 = p1 + (n1 * t1);
+	int time2 = p2 + (n2 * t2);
+	if (time1 <= time2) {
+		cout << "1" << time1;
+	}
+	else if (time2 < time1) {
+		cout << "2" << " " << time2;
+	}
+	
+	return 0;
+}
